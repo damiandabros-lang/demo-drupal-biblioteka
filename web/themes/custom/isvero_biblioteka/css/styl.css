@@ -61,5 +61,7 @@ button:hover{background:var(--akcent-ciemny)}
 .termin{display:block;font-weight:600;color:var(--akcent-ciemny)}
 .wynik-status{font-weight:600}
 .minione .termin{color:#4a5456}
-main table{table-layout:fixed}
+/* Tabela danych może przewijać się we własnym obszarze, bez rozbijania słów. */
+main .table-wrap table{table-layout:auto;min-width:38rem}
+main .table-wrap th,main .table-wrap td{overflow-wrap:normal}
 main img{max-width:100%;height:auto}

@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function isvero_biblioteka_preprocess_html(array &$variables): void {
+  // Nazwa witryny zawiera już nazwę biblioteki i oznaczenie DEMO.
+  // Nie zmieniamy tytułów książek, wydarzeń ani pozostałych podstron.
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    unset($variables['head_title']['title'], $variables['head_title']['slogan']);
+  }
+}

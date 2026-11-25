@@ -174,6 +174,7 @@ class Biblioteka extends ControllerBase {
 </form>
 <div role="status" class="wynik-status">{% if szukano %}Znaleziono {{ liczba }} {{ odm }}.{% endif %}</div>
 {% if szukano and liczba %}
+<p class="meta">Na małym ekranie tabelę można przewijać w poziomie, także klawiszami strzałek po ustawieniu na niej fokusu.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Wyniki wyszukiwania w katalogu"><table><caption>Wyniki wyszukiwania{% if fraza %}: „{{ fraza }}”{% endif %}</caption>
 <thead><tr><th scope="col">Tytuł</th><th scope="col">Autor</th><th scope="col">Rok</th><th scope="col">Dział</th><th scope="col">Dostępność</th></tr></thead>
 <tbody>{% for k in wyniki %}<tr><th scope="row"><a href="{{ k.url }}">{{ k.tytul }}</a></th><td>{{ k.autor }}</td><td>{{ k.rok }}</td><td>{{ k.kategoria }}</td><td>{{ k.dostepna ? "Dostępna" : "Wypożyczona" }}</td></tr>{% endfor %}</tbody></table></div>
