@@ -32,7 +32,7 @@ $settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components']
 $settings['reverse_proxy'] = TRUE;
 $settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'];
 
-$settings['trusted_host_patterns'] = array_filter(explode(',', getenv('DRUPAL_TRUSTED_HOSTS') ?: '^localhost$,^127\.0\.0\.1$,^.+\.sslip\.io$'));
+$settings['trusted_host_patterns'] = array_filter(explode(',', getenv('DRUPAL_TRUSTED_HOSTS') ?: '^localhost$,^127\.0\.0\.1$,^demo-biblioteka\.isverostudio\.com$,^.+\.sslip\.io$'));
 
 // Demo nie wysyła poczty.
 $config['system.mail']['interface']['default'] = 'test_mail_collector';

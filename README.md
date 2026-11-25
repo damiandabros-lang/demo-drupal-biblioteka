@@ -2,6 +2,8 @@
 
 > **DEMO / portfolio (2026).** Projekt pokazowy Isvero Studio. Biblioteka, wydarzenia, książki i osoby są **fikcyjne**. Nie jest to strona żadnej instytucji ani wdrożenie dla klienta. Serwis wysyła `noindex` i ma baner DEMO na każdej stronie.
 
+**Demo na żywo:** https://demo-biblioteka.isverostudio.com (noindex)
+
 Przykład serwisu gminnej biblioteki publicznej na **Drupal 11** z własnym modułem i motywem, zgodnego z **WCAG 2.1 AA** i gotowego do wdrożenia w kontenerach (Coolify, Docker Compose).
 
 ## Co zawiera
