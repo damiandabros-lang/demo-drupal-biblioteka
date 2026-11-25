@@ -1,0 +1,10 @@
+name: 'Isvero DEMO – biblioteka'
+type: module
+description: 'Demo serwisu biblioteki (Isvero Studio, 2026): katalog, nowości, wydarzenia, nagłówki bezpieczeństwa, noindex.'
+package: Isvero
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:language
+  - drupal:datetime
+  - drupal:options

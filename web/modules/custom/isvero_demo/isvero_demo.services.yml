@@ -1,0 +1,5 @@
+services:
+  isvero_demo.naglowki:
+    class: Drupal\isvero_demo\EventSubscriber\Naglowki
+    tags:
+      - { name: event_subscriber }

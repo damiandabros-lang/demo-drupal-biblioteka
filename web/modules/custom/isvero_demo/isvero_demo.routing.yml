@@ -1,0 +1,42 @@
+isvero_demo.start:
+  path: '/start'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::start'
+    _title: 'Gminna Biblioteka Publiczna w Przykładowie'
+  requirements:
+    _access: 'TRUE'
+isvero_demo.aktualnosci:
+  path: '/aktualnosci'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::aktualnosci'
+    _title: 'Aktualności'
+  requirements:
+    _access: 'TRUE'
+isvero_demo.wydarzenia:
+  path: '/wydarzenia'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::wydarzenia'
+    _title: 'Wydarzenia'
+  requirements:
+    _access: 'TRUE'
+isvero_demo.katalog:
+  path: '/katalog'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::katalog'
+    _title: 'Katalog zbiorów'
+  requirements:
+    _access: 'TRUE'
+isvero_demo.nowosci:
+  path: '/nowosci'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::nowosci'
+    _title: 'Nowości w zbiorach'
+  requirements:
+    _access: 'TRUE'
+isvero_demo.mapa:
+  path: '/mapa-strony'
+  defaults:
+    _controller: '\Drupal\isvero_demo\Controller\Biblioteka::mapa'
+    _title: 'Mapa strony'
+  requirements:
+    _access: 'TRUE'

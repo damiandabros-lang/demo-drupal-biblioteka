@@ -1,0 +1,19 @@
+<div class="demo-pasek" role="note"><strong>DEMO</strong> – projekt pokazowy Isvero Studio (2026). Fikcyjna biblioteka i dane, nie jest to strona żadnej instytucji.</div>
+<header class="naglowek">
+  <div class="wnetrze">
+    <a class="logo" href="{{ path('<front>') }}"><span class="logo-znak" aria-hidden="true">GBP</span><span>Gminna Biblioteka Publiczna<br><small>w Przykładowie</small></span></a>
+  </div>
+  {% if page.nawigacja %}
+  <nav class="menu-glowne" aria-label="Menu główne"><div class="wnetrze">{{ page.nawigacja }}</div></nav>
+  {% endif %}
+</header>
+<main id="tresc" tabindex="-1" class="wnetrze">
+  {{ page.tresc }}
+</main>
+<footer class="stopka">
+  <div class="wnetrze">
+    {% if page.stopka %}<nav aria-label="Stopka">{{ page.stopka }}</nav>{% endif %}
+    <p>Gminna Biblioteka Publiczna w Przykładowie (dane fikcyjne), ul. Przykładowa 1, 00-000 Przykładowo.</p>
+    <p>Wykonanie: Isvero Studio – wersja demonstracyjna, Drupal 11.</p>
+  </div>
+</footer>

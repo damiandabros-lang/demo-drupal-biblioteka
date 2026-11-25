@@ -1,0 +1,65 @@
+:root{--tlo:#fff;--tekst:#1b1b1b;--akcent:#0b5a6b;--akcent-ciemny:#073e4a;--jasny:#eef5f6;--ramka:#5f6b6d;--fokus:#b34700}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:var(--tekst);background:var(--tlo)}
+a{color:var(--akcent);text-underline-offset:.15em}
+a:hover{color:var(--akcent-ciemny)}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:2px}
+.pomin{position:absolute;left:-9999px;top:0;background:#fff;color:var(--akcent-ciemny);padding:.75rem 1rem;z-index:10;font-weight:700}
+.pomin:focus{left:1rem;top:1rem}
+.wnetrze{max-width:72rem;margin:0 auto;padding:0 1rem}
+.demo-pasek{background:#fff3cd;color:#3d2e00;border-bottom:2px solid #8a6d00;padding:.5rem 1rem;text-align:center;font-size:.95rem}
+.naglowek{background:var(--akcent);color:#fff}
+.naglowek .wnetrze{padding-top:1rem;padding-bottom:1rem}
+.logo{display:inline-flex;gap:.75rem;align-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem;line-height:1.2}
+.logo:hover{color:#fff}
+.logo small{font-weight:400;font-size:1rem}
+.logo-znak{display:inline-grid;place-items:center;width:3rem;height:3rem;border:2px solid #fff;border-radius:.5rem;font-size:1rem}
+.menu-glowne{background:var(--akcent-ciemny)}
+.menu-glowne ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+.menu-glowne a{display:block;color:#fff;text-decoration:none;padding:.75rem 1rem}
+.menu-glowne a:hover,.menu-glowne a.is-active{text-decoration:underline;background:rgba(255,255,255,.12)}
+.menu-glowne a:focus-visible{outline-color:#ffd27a}
+main{overflow-wrap:break-word;padding-top:1.5rem;padding-bottom:3rem;min-height:50vh}
+main:focus{outline:none}
+h1{font-size:2rem;line-height:1.2;margin:.5rem 0 1rem;color:var(--akcent-ciemny)}
+h2{font-size:1.4rem;line-height:1.3;margin:1.75rem 0 .75rem}
+.wstep{font-size:1.15rem;max-width:48rem}
+.kafelki{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:1rem}
+.kafelki a{display:block;height:100%;padding:1rem;border:2px solid var(--akcent);border-radius:.5rem;text-decoration:none;background:var(--jasny)}
+.kafelki a:hover{background:#fff}
+.kafel-tytul{display:block;font-weight:700;font-size:1.1rem}
+.kafel-opis{display:block;color:var(--tekst);margin-top:.25rem}
+.dwie-kolumny{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.lista-wydarzen,.lista-wpisow,.lista-ksiazek{list-style:none;padding:0;margin:0}
+.lista-wydarzen li,.lista-wpisow li,.lista-ksiazek li{padding:.75rem 0;border-bottom:1px solid #c9d3d5}
+.meta{color:#4a5456}
+.wiecej{font-weight:600}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+caption{text-align:left;font-weight:700;padding:.5rem 0}
+th,td{border:1px solid var(--ramka);padding:.5rem .75rem;overflow-wrap:anywhere;text-align:left;vertical-align:top}
+thead th{background:var(--jasny)}
+form.katalog-form{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-end;padding:1rem;background:var(--jasny);border-radius:.5rem}
+form.katalog-form label{display:block;font-weight:600;margin-bottom:.25rem}
+input,select,button{font:inherit}
+input[type=search],input[type=text],select{padding:.5rem;border:2px solid var(--ramka);border-radius:.25rem;min-width:min(16rem,100%)}
+button,.przycisk{background:var(--akcent);color:#fff;border:2px solid var(--akcent);border-radius:.25rem;padding:.5rem 1.25rem;cursor:pointer}
+button:hover{background:var(--akcent-ciemny)}
+.dostepna{color:#145c22;font-weight:600}
+.wypozyczona{color:#8a1c1c;font-weight:600}
+.stopka{background:#24302f;color:#f1f1f1;padding:2rem 0}
+.stopka a{color:#cdeef4}
+.stopka ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
+.field__label{font-weight:700}
+.field--label-inline .field__label,.field--label-inline .field__item{display:inline}
+.field--label-inline .field__label::after{content:": "}
+.table-wrap{overflow-x:auto}
+.visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);overflow:hidden;height:1px;width:1px;word-wrap:normal}
+@media (max-width:40rem){h1{font-size:1.6rem}.menu-glowne a{padding:.6rem .75rem}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.katalog-form .pole{display:flex;flex-direction:column}
+.termin{display:block;font-weight:600;color:var(--akcent-ciemny)}
+.wynik-status{font-weight:600}
+.minione .termin{color:#4a5456}
+main table{table-layout:fixed}
+main img{max-width:100%;height:auto}

@@ -1,0 +1,48 @@
+# DEMO Isvero Studio – Drupal 11 (biblioteka). Osobna aplikacja Coolify; domena tylko na "web" (port 80).
+# Hasła generuje Coolify (zmienne SERVICE_PASSWORD_*), w repozytorium nie ma żadnych sekretów. Baza bez publicznego portu.
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_NAME: drupal
+      DB_USER: drupal
+      DB_PASSWORD: ${SERVICE_PASSWORD_MYSQL}
+      DRUPAL_HASH_SALT: ${SERVICE_PASSWORD_64_HASHSALT}
+      DRUPAL_ADMIN_PASSWORD: ${SERVICE_PASSWORD_ADMIN}
+    volumes:
+      - drupal_files:/opt/drupal/web/sites/default/files
+    expose:
+      - "80"
+    deploy:
+      resources:
+        limits: { memory: 320M, cpus: "0.75" }
+    logging: { driver: json-file, options: { max-size: "10m", max-file: "3" } }
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    command: ["--innodb-buffer-pool-size=64M", "--max-connections=40", "--performance-schema=OFF", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci"]
+    environment:
+      MARIADB_DATABASE: drupal
+      MARIADB_USER: drupal
+      MARIADB_PASSWORD: ${SERVICE_PASSWORD_MYSQL}
+      MARIADB_ROOT_PASSWORD: ${SERVICE_PASSWORD_MYSQLROOT}
+    volumes:
+      - drupal_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    deploy:
+      resources:
+        limits: { memory: 256M, cpus: "0.5" }
+    logging: { driver: json-file, options: { max-size: "10m", max-file: "3" } }
+volumes:
+  drupal_files:
+  drupal_db:

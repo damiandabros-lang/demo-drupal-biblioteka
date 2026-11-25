@@ -1,0 +1,11 @@
+name: 'Isvero – biblioteka (DEMO)'
+type: theme
+description: 'Motyw demonstracyjny biblioteki zgodny z WCAG 2.1 AA (Isvero Studio, 2026).'
+core_version_requirement: ^11
+base theme: stable9
+libraries:
+  - isvero_biblioteka/styl
+regions:
+  nawigacja: 'Nawigacja'
+  tresc: 'Treść'
+  stopka: 'Stopka'

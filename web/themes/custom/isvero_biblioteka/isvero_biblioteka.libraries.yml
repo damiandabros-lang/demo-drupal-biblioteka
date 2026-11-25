@@ -1,0 +1,5 @@
+styl:
+  version: 1.0
+  css:
+    theme:
+      css/styl.css: {}
