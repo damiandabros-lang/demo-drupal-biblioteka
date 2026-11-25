@@ -144,7 +144,7 @@ $teraz = \Drupal::time()->getRequestTime();
 $aktualnosci = [
   ['Nowe godziny otwarcia w grudniu', 'W okresie świątecznym biblioteka będzie czynna krócej. Szczegóły na stronie z godzinami otwarcia.', 2],
   ['Ferie zimowe w bibliotece – zapisy', 'Zapraszamy dzieci w wieku 7–12 lat na warsztaty plastyczne i czytelnicze. Liczba miejsc ograniczona.', 6],
-  ['Kiermasz książek używanych', 'Książki wycofane ze zbiorów można zabrać za symboliczną cegiełkę na rzecz zakupu nowości.', 11],
+  ['Kiermasz książek używanych', 'Książki wycofane ze zbiorów można zabrać za symboliczną cegiełkę na zakup nowości.', 11],
   ['Wyniki konkursu „Moja ulubiona książka”', 'Dziękujemy wszystkim uczestnikom. Prace laureatów można oglądać w czytelni.', 18],
   ['Nowy zestaw audiobooków', 'Do zbiorów trafiło 40 audiobooków dla dorosłych i dzieci, także dla osób słabowidzących.', 25],
 ];
@@ -154,7 +154,7 @@ foreach ($aktualnosci as [$t, $tresc, $dni]) {
 
 $wydarzenia = [
   ['Spotkanie autorskie: kryminał z małego miasta', 4, '17:00', 'Czytelnia, biblioteka główna'],
-  ['Klub Czytelniczy Dyskusyjny', 9, '18:00', 'Sala na piętrze'],
+  ['Dyskusyjny Klub Czytelniczy', 9, '18:00', 'Sala na piętrze'],
   ['Warsztaty „Zrób własną zakładkę”', 14, '10:00', 'Oddział dla dzieci'],
   ['Kurs: bankowość internetowa bez stresu (dla seniorów)', 20, '11:00', 'Czytelnia komputerowa'],
   ['Głośne czytanie dla przedszkolaków', 27, '9:30', 'Filia w Nowej Wsi'],
@@ -182,7 +182,7 @@ $ksiazki = [
   ['Szyfr z biblioteki', 'Anna Przykładowa', 2026, 'Kryminał', 'wypozyczona'],
   ['Wyprawa na Księżyc', 'Ewa Wymyślona', 2024, 'Dla dzieci', 'dostepna'],
   ['Las w czterech porach roku', 'Marek Zmyślony', 2023, 'Popularnonaukowe', 'dostepna'],
-  ['Listy z Szczytna Małego', 'Zofia Fikcyjna', 2025, 'Powieść', 'dostepna'],
+  ['Listy ze Szczytna Małego', 'Zofia Fikcyjna', 2025, 'Powieść', 'dostepna'],
   ['Kuchnia regionu', 'Halina Testowa', 2026, 'Poradnik', 'wypozyczona'],
   ['Drużyna z podwórka', 'Kamil Demo', 2025, 'Dla młodzieży', 'dostepna'],
   ['Zamek na wzgórzu', 'Piotr Fikcyjny', 2026, 'Historia', 'dostepna'],

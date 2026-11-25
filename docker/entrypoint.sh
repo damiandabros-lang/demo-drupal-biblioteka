@@ -24,6 +24,7 @@ if [ "$($DRUSH status --field=bootstrap 2>/dev/null)" != "Successful" ]; then
   echo "[demo] instalacja zakończona (login: admin, hasło w zmiennej Coolify SERVICE_PASSWORD_ADMIN)"
 else
   $DRUSH updatedb -y || true
+  $DRUSH php:script scripts/aktualizacje.php || true
 fi
 $DRUSH cache:rebuild
 chown -R www-data:www-data web/sites/default/files
